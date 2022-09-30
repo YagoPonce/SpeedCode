@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "Press Start 2P";
+    src: url(/fonts/PressStart2P-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    display: flex;
+    background-image: url(/Images/pcs.gif);
+    background-size: cover;
+    font-family: "Press Start 2P";
+}
+
+
+
+.container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: flex-start
+}
+
+div marquee {
+    padding: 10px;
+}
+
+#myCanvas, #gameoverScreen {
+    display: none
+    
+}
+
+#scrollText {
+    font-size: 50px;
+    color: white
+}
+
+#startScreen img {
+    display: flex;
+}
+
+#startImg {
+    display: flex;
+    justify-content: left;
+    align-items:flex-end;
+    padding-right: 20px;
+    margin: 50px;
+    font-size: 50px;
+    color: white;
+    padding: 10vh;
+}
+
+#imgInicio p {
+font-size: 40px;
+color: white;
+}
+
+#myCanvas {
+    margin-left: 40%;
+    margin-top: 10%;
+    background: rgba(170, 187, 97, 0.5);
+}
+
+

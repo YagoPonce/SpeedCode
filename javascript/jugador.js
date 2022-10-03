@@ -9,8 +9,6 @@ class Jugador {
         this.s = 10;
         this.direction = 1
         
-        
-        
     }
 drawJugador = () => {
     if (this.direction === 1) {

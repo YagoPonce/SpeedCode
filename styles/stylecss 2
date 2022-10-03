@@ -1,0 +1,95 @@
+@font-face {
+    font-family: "Press Start 2P";
+    src: url(/fonts/PressStart2P-Regular.ttf);
+    
+}
+
+.startBtn{
+    font-size: 40px;
+    size: 100px;
+    text-align: center;
+	display: inline-block;
+	margin:20px;
+    font-weight: bold;
+    padding: 10px 0 10px 10px ;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    -webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 21px;
+	border-radius: 10px;
+    box-shadow: 0 .2em gray; 
+    cursor: pointer;
+
+}
+.startBtn:active {
+	box-shadow: none;
+	position: relative;
+	top: .2em;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    background-image: url(/Images/pcs.gif);
+    background-size: cover;
+    font-family: "Press Start 2P";
+}
+
+#pantallaJuego {
+    display: flex;
+    color: white;
+}
+
+.container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: flex-start
+}
+
+div marquee {
+    padding: 10px;
+}
+
+#myCanvas, #gameoverScreen, #gameScreen {
+    display: none;
+    color: white;
+    
+}
+
+#scrollText {
+    font-size: 50px;
+    color: white
+}
+
+#startScreen img {
+    display: flex;
+}
+
+#startImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-right: 20px;
+    
+    margin: 50px;
+    font-size: 50px;
+    color: white;
+    padding: 10vh;
+}
+
+#imgInicio p {
+font-size: 40px;
+color: white;
+}
+
+#myCanvas {
+    margin-left: 40%;
+    margin-top: 10%;
+    background: rgba(170, 187, 97, 0.5);
+}
+
+

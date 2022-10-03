@@ -1,7 +1,6 @@
 class Game {
   constructor() {
     this.jugador = new Jugador();
-    this.gameOn = 0;
     this.pcMaloArr = [];
     this.pcBuenoArr = [];
     this.frames = 0;
@@ -57,20 +56,19 @@ class Game {
         this.jugador.h + this.jugador.y > eachPcBueno.y
       ) {
         this.pcBuenoArr.shift();
-        codigoResuelto.innerText =
-          Number(codigoResuelto.innerText) + Number(100);
+        codigoResuelto.innerText = Number(codigoResuelto.innerText) + Number(100);
       }
     });
   };
 
   speedCode = () => {
     if (codes.innterText === "casa") {
-        this.gameOn = 0
+        gameOn = 0
     }
 }
 
   gameOver = () => {
-    this.gameOn = 2;
+    gameOn = 2;
     canvas.style.display = "none";
     gameoverScreen.style.display = "flex";
   };
@@ -81,6 +79,7 @@ class Game {
     ctx.clearRect(0, 0, canvas.clientWidth, canvas.height);
     this.frames = this.frames + 1;
     // 2. Acciones y movimientos de los elementos
+    gameOn=0;
     this.speedCode();
     this.addPcMalo();
     this.addPcBueno();
@@ -102,13 +101,11 @@ class Game {
     });
 
     //4. Control de la recursion
-    if (Number(codigoResuelto.innerText) > 100) {
-      this.gameOn = 1;
-      canvas.style.display = "none";
+    if (Number(codigoResuelto.innerText) > 199 && Number(codigoResuelto.innerText) < 299) {
+      gameOn = 1;
       inputCode.style.display = "block";
-      score.style.display = "flex"
     }
-    if (this.gameOn === 0) {
+    if (gameOn == 0) {
       requestAnimationFrame(this.gameLoop);
     }
   };

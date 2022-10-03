@@ -24,8 +24,8 @@ drawJugador = () => {
     }
 
 abajo = () => {
-    if (this.y > 500) {
-        this.y = 500
+    if (this.y > 400) {
+        this.y = 400
     } else {
         this.y = this.y + this.s
         this.direction = 2
@@ -42,8 +42,8 @@ arriba = () => {
 }
 
 derecha = () => {
-    if (this.x > 820) {
-        this.x = 820
+    if (this.x > 720) {
+        this.x = 720
     } else {
         this.x = this.x + this.s
         this.direction = 1

@@ -7,6 +7,7 @@ const startBtn = document.querySelector("#startBtn");
 const restartBtn = document.querySelector("#restart-btn");
 const gameoverScreen = document.querySelector("#gameoverScreen");
 const gameScreen = document.querySelector("#gameScreen")
+let ponerCodigo = document.querySelector("#ponerCodigo")
 let inputCode = document.querySelector("#speedCode");
 let score = document.querySelector("#score");
 let codes = document.querySelector("#codes");
@@ -16,12 +17,13 @@ let gameOn = 0;
 let intentoMasAlto = document.querySelector("#intentoMasAlto");
 
 // FUNCIONES
-const startGame = () => {
 
+const startGame = () => {
+ gameoverScreen.style.display="none";
   startScreen.style.display = "none";
   canvas.style.display = "flex";
   gameScreen.style.display = "flex";
-  score.style.display = "block";
+  score.style.display = "flex";
   gameObj = new Game();
   gameObj.gameLoop();
 };
@@ -30,8 +32,7 @@ const replayGame = () => {
     intentoMasAlto.innerText = codigoResuelto.innerText;
   }
   codigoResuelto.innerText = 0;
-  startScreen.style.display = "flex";
-  canvas.style.display = "none";
+  startGame()
 };
 
 // ADD EVENT LISTENERS
@@ -57,7 +58,7 @@ window.addEventListener("keydown", (event) => {
 });
 
 window.addEventListener("keydown", (event) => {
-  if (event.code === "Enter" && codes.value === "casa") {
+  if (event.code === "Enter" && codes.value === ponerCodigo.innerText) {
     codigoResuelto.innerText = Number(codigoResuelto.innerText) + Number(100);
     gameObj.gameLoop();
   }

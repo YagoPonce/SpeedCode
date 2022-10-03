@@ -19,25 +19,29 @@
       
       <div class="startImg">
         <img src="/Images/estandard.png" width="300px" />
-        <p>Mobimiento</p>
+        <h2> 3 vidas </h2>
+        <span><img src="/Images/3vidas.png" /></span>
+        <span><h2>Mobimiento:</h2>
         <img src="/Images/teclas.png" id="imgBtn" width="200px" height="200px"/>
-        <p> 3 vidas 
+      </span>
+      <button id='startBtn' class="btn">START</button>
         </div>
-        <div><button id='startBtn' class="btn">START</button></div>
-      
-      </div>
-      
+        </div>
     
         
       <!-- GAME SCREEN -->
       <div id="gameScreen">
         <h2>Racha mas alta<p id="intentoMasAlto">0</p></h2>
         <h2 id="score">Codigo resuelto:<p id="codigoResuelto">0</p> </h2>
-      <h1 id="ponerCodigo">Copia este codigo sin ningún error: <input id="codes" type="text"/> </h1>
-      <canvas id="myCanvas" width="900" height="600"></canvas>
-        <section id="speedCode">
-           
-            
+      </div>
+        <div id="speedCode">
+          
+          <canvas id="myCanvas" width="800" height="500"></canvas>
+          
+          <h1>Copia este codigo sin ningún error: </h1>
+          <h3 id="ponerCodigo">...</h3>
+          <input id="codes" type="text" width="400px" value> 
+        </div>
 
 
         
@@ -45,8 +49,9 @@
 
 
 
-        </section>
-      </div>
+        </div>
+      
+      
       <!-- GAME OVER SCREEN -->
       <div id="gameoverScreen" class="container">
 
@@ -61,6 +66,7 @@
     <script src="/javascript/jugador.js"></script>
     <script src="/javascript/pcMalo.js"></script>
     <script src="/javascript/pcBueno.js"></script>
+    <script src="/javascript/codigos.js"></script>
 
   </body>
 </html>

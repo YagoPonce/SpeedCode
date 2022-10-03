@@ -13,7 +13,7 @@ body {
     color: white;
 }
 
-#gameScreen, #gameoverScreen {
+#gameScreen, #gameoverScreen, #speedCode {
     display: none;
 }
 
@@ -29,7 +29,7 @@ marquee {
     font-size: 40px;
     size: 100px;
     text-align: center;
-	display: inline-block;
+	display: block;
 	margin:20px;
     font-weight: bold;
     padding: 10px 10px 10px 10px ;
@@ -44,19 +44,24 @@ marquee {
     cursor:grab;
 
 }
-.btn.active {
+.btn:active {
 	box-shadow: none;
 	position: relative;
 	top: .2em;
 }
 
-#startImg {
+.startImg {
+   display: flex;
+   padding: 50px;
+   margin: 20px;
+
+}
+
+#myCanvas {
+    
+    background: rgba(170, 187, 97, 0.5);
+}
+
+#speedCode {
     display: flex;
-    flex-direction: column;
-    justify-content: left;
-    padding: 30px;
-    margin: 50px;
-    font-size: 50px;
-    color: white;
-    padding: 10vh;
 }

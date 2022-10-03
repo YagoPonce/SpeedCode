@@ -10,7 +10,7 @@
   <body>
     
     <div class="container">
-      <marquee id="scrollText" behavior="scroll" direction="left">A pesar de todos tus esfuerzos, no has
+      <marquee id="scrollText" behavior="scroll" scrollamount="25" direction="left">A pesar de todos tus esfuerzos, no has
         podido acabar con el LAB de hoy... o quizás ya deberíamos decir del LAB de ayer. Te quedan solo
         unas pocas horas....
       </marquee>
@@ -18,31 +18,49 @@
       <div id="startScreen" class="container">
       
       <div class="startImg">
-        <img src="/Images/estarndard.png" width="300px" />
+        <img src="/Images/estandard.png" width="300px" />
         <p>Mobimiento
         <img src="/Images/teclas.png" id="imgBtn" width="200px" height="200px"/></p>
         <p> 3 vidas 
-        <img src="/Images/vida.png"  id="imgVida" /></p>
       </div>
       <div class="startImg">
       
       </div>
-        <button id="startBtn">Empieza a codear</button>
+        <span id='startBtn' class="startBtn">START</span>
       </div>
       
     
         
       <!-- GAME SCREEN -->
+      <div>
+        <h2 id="score">Codigo resuelto:<p id="codigoResuelto">0</p> </h2>
       <canvas id="myCanvas" width="900" height="600"></canvas>
+        <section id="speedCode">
+          <form action=""> 
+            <h1>Copia este codigo sin ningún error: <input id="codes" type="text"/> </h1>
+
+
+          </form>
+
+
+
+
+        </section>
+      </div>
       <!-- GAME OVER SCREEN -->
       <div id="gameoverScreen" class="container">
+
+
         <!--<img src="./images/gameover.png" width="500" alt="logo" /> -->
-        <button id="restart-btn">Play Again!</button>
+        <button id="restart-btn" class="startBtn">Play Again!</button>
       </div>
     </div>
 
     <script src="/javascript/game.js"></script>
     <script src="/javascript/main.js"></script>
     <script src="/javascript/jugador.js"></script>
+    <script src="/javascript/pcMalo.js"></script>
+    <script src="/javascript/pcBueno.js"></script>
+
   </body>
 </html>

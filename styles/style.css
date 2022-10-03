@@ -1,6 +1,32 @@
 @font-face {
     font-family: "Press Start 2P";
     src: url(/fonts/PressStart2P-Regular.ttf);
+    
+}
+
+.startBtn{
+    font-size: 40px;
+    size: 100px;
+    text-align: center;
+	display: inline-block;
+	margin:20px;
+    font-weight: bold;
+    padding: 10px 0 10px 10px ;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    -webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 21px;
+	border-radius: 10px;
+    box-shadow: 0 .2em gray; 
+    cursor: pointer;
+
+}
+.startBtn:active {
+	box-shadow: none;
+	position: relative;
+	top: .2em;
 }
 
 body {
@@ -25,7 +51,7 @@ div marquee {
     padding: 10px;
 }
 
-#myCanvas, #gameoverScreen {
+#myCanvas, #gameoverScreen, #speedCode, #score {
     display: none
     
 }

@@ -12,21 +12,21 @@ function addCodigo(randomNum) {
     }else if (randomNum == 5) {
  return `let newArr = ["gatos", "perros"]`
     }else if (randomNum == 6) {
- return `console.log("Hola mundo")`
+ return `const newObj = [name: "Iñigo"; gatos: 9]`
     }else if (randomNum == 7) {
- return `console.log("Hola mundo")`
+ return ` <!-- comentario de html -->`
     }else if (randomNum == 8) {
- return `console.log("Hola mundo")`
+ return `/* comentario largo de javaScript */`
     }else if (randomNum == 9) {
- return `console.log("Hola mundo")`
+ return `if (variable1 > variable2) {}`
     }else if (randomNum == 10) {
- return `console.log("Hola mundo")`
+ return `newArr.push("añadir al final del array")`
     }else if (randomNum ==11) {
- return `console.log("Hola mundo")`
+ return `<link rel = "stylesheet" href = "/style.css"`
     }else if (randomNum == 12) {
- return `console.log("Hola mundo")`
+ return `#variable { display: flex }`
     }else if (randomNum == 13) {
- return `console.log("Hola mundo")`
+ return `let randomNum = Math.random() * 2`
     }else if (randomNum == 14) {
  return `console.log("Hola mundo")`
     }else if (randomNum == 15) {

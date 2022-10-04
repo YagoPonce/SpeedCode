@@ -8,58 +8,51 @@
     <link rel="stylesheet" href="/styles/style.css" />
   </head>
   <body>
-    
-    <div class="container">
+      
       <marquee id="scrollText" behavior="scroll" scrollamount="25" direction="left">A pesar de todos tus esfuerzos, no has
         podido acabar con el LAB de hoy... o quizás ya deberíamos decir del LAB de ayer. Te quedan solo
         unas pocas horas....
       </marquee>
     
-      <div id="startScreen" class="container">
+      <div id="startScreen"> 
       
-      <div class="startImg">
+        
         <img src="/Images/estandard.png" width="300px" />
-        <h2> 3 vidas </h2>
+        <div>
+          <h2> 3 vidas </h2>
         <span><img src="/Images/3vidas.png" /></span>
-        <span><h2>Mobimiento:</h2>
+      </div>
+      <div>  
+      <h2>Mobimiento:</h2>
         <img src="/Images/teclas.png" id="imgBtn" width="200px" height="200px"/>
-      </span>
-      <button id='startBtn' class="btn">START</button>
+      </div>
+      <button id='startBtn' class="btn">EMPIEZA A CODEAR!</button>
         </div>
-        </div>
+      
     
         
       <!-- GAME SCREEN -->
       <div id="gameScreen">
-        <h2>Racha mas alta<p id="intentoMasAlto">0</p></h2>
-        <h2 id="score">Codigo resuelto:<p id="codigoResuelto">0</p> </h2>
-      </div>
-        <div id="speedCode">
-          
-          <canvas id="myCanvas" width="800" height="500"></canvas>
-          
-          <h1>Copia este codigo sin ningún error: </h1>
-          <h3 id="ponerCodigo">...</h3>
-          <input id="codes" type="text" width="400px" value> 
-        </div>
-
-
         
-
-
-
-
-        </div>
+        <h2 class="letreros">Racha mas alta <p id="intentoMasAlto" class="letreros">0</p></h2>
+        <h2 id="score" class="letreros">Codigo resuelto:<p id="codigoResuelto" class="letreros">0</p> </h2>
+          <h1 class="letreros">Copia este codigo sin ningún error: <h3 id="ponerCodigo" class="letreros"> "..."</h3></h1>
+          <canvas id="myCanvas" width="800" height="500"></canvas>
+          <input id="codes" type="text" width="100px" value> 
+        
+        
+          
+          
       
-      
-      <!-- GAME OVER SCREEN -->
-      <div id="gameoverScreen" class="container">
-
-
-        <!--<img src="./images/gameover.png" width="500" alt="logo" /> -->
-        <button id="restart-btn" class="btn">Play Again!</button>
-      </div>
     </div>
+      
+
+      <!-- GAME OVER SCREEN -->
+      <div id="gameoverScreen">
+        <img src="./Images/tumblr_7b4391bbfed2af6764fec491eab08b57_babb6de8_1280.gif" alt="logo" />
+        <button id="restart-btn" class="btn">ÁNIMO, INTÉNTALO OTRA VEZ</button>
+      </div>
+
 
     <script src="/javascript/game.js"></script>
     <script src="/javascript/main.js"></script>

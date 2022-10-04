@@ -8,7 +8,6 @@ const restartBtn = document.querySelector("#restart-btn");
 const gameoverScreen = document.querySelector("#gameoverScreen");
 const gameScreen = document.querySelector("#gameScreen")
 let ponerCodigo = document.querySelector("#ponerCodigo")
-let inputCode = document.querySelector("#speedCode");
 let score = document.querySelector("#score");
 let codes = document.querySelector("#codes");
 let codigoResuelto = document.querySelector("#codigoResuelto");
@@ -18,15 +17,15 @@ let intentoMasAlto = document.querySelector("#intentoMasAlto");
 
 // FUNCIONES
 
-const startGame = () => {
- gameoverScreen.style.display="none";
+function startGame() {
+    gameoverScreen.style.display = "none";
   startScreen.style.display = "none";
-  canvas.style.display = "flex";
-  gameScreen.style.display = "flex";
-  score.style.display = "flex";
+  gameScreen.style.display = "grid";
   gameObj = new Game();
   gameObj.gameLoop();
-};
+}
+
+
 const replayGame = () => {
   if (codigoResuelto.innerText > intentoMasAlto.innerText) {
     intentoMasAlto.innerText = codigoResuelto.innerText;

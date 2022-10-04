@@ -20,7 +20,7 @@ class Game {
       this.pcBuenoArr.shift();
       let randomNumY = Math.random() * 380;
       let randomYint = Math.floor(randomNumY);
-      let randomNumX = Math.random() * 750;
+      let randomNumX = Math.random() * 700;
       let randomXint = Math.floor(randomNumX);
       let newPcBueno = new PcBueno(randomYint, randomXint);
       this.pcBuenoArr.push(newPcBueno);
@@ -69,8 +69,8 @@ addCodigos = () => {
 
   gameOver = () => {
     gameOn = 2;
-    canvas.style.display = "none";
-    gameoverScreen.style.display = "flex";
+    gameScreen.style.display = "none";
+    gameoverScreen.style.display = "grid";
   };
   
   screen = () => {
@@ -81,11 +81,11 @@ addCodigos = () => {
 
 
   gameLoop = () => {
+    gameOn = 0;
     ctx.clearRect(0, 0, canvas.clientWidth, canvas.height);
     this.frames = this.frames + 1;
-    ponerCodigo.innerText = "..."
+    ponerCodigo.innerText = "...";
     // 2. Acciones y movimientos de los elementos
-    gameOn=0;
     this.addPcMalo();
     this.addPcBueno();
     this.pcMaloArr.forEach((eachPcMalo) => {
@@ -109,15 +109,15 @@ addCodigos = () => {
     //4. Control de la recursion
     if (Number(codigoResuelto.innerText) > 199 && Number(codigoResuelto.innerText) < 299) {
         gameOn = 1;
-        ponerCodigo.style.display = "flex";
         ponerCodigo.InnerText = this.addCodigos()
-        } else if (Number(codigoResuelto.innerText) > 399 && Number(codigoResuelto.innerText) < 499) {
+        } else if (Number(codigoResuelto.innerText) > 499 && Number(codigoResuelto.innerText) < 599) {
         gameOn = 1;
-        ponerCodigo.style.display = "flex";
         ponerCodigo.InnerText = this.addCodigos()
-        } else if (Number(codigoResuelto.innerText) > 699 && Number(codigoResuelto.innerText) < 799) {
+        } else if (Number(codigoResuelto.innerText) > 799 && Number(codigoResuelto.innerText) < 899) {
         gameOn = 1;
-        ponerCodigo.style.display = "flex";
+        ponerCodigo.InnerText = this.addCodigos()
+        } else if (Number(codigoResuelto.innerText) > 1099 && Number(codigoResuelto.innerText) < 1199) {
+        gameOn = 1;
         ponerCodigo.InnerText = this.addCodigos()
         }
 

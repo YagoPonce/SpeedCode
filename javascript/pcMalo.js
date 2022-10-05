@@ -1,7 +1,7 @@
 class PcMalo {
     constructor (randomYint) {
         this.img = new Image();
-        this.img.src = "/Images/pcMalo.png";
+        this.img.src = "./Images/pcMalo.png";
         this.x = 800; 
         this.y = randomYint;
         this.w = 90;

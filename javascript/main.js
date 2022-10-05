@@ -28,10 +28,7 @@ const cogerPcBueno = new Audio("./sounds/pcbueno.wav")
 const activarCafeSound = new Audio("./sounds/usarCafe.wav")
 
 
-
 // FUNCIONES
-openMusic.play();
-openMusic.loop = true;
 
 activarCafe = () => {
     cafeActivo = true
@@ -43,6 +40,7 @@ activarCafe = () => {
 
 
 function startGame() {
+
 gameoverMusic.pause();
 openMusic.pause();
 gameMusic.currentTime=0;
@@ -107,7 +105,7 @@ window.addEventListener("keydown", (event) => {
 });
 
 window.addEventListener("keydown", (event) => {
-    if (event.code === "Space" && Number(usarCafe.innerText) > Number(0)) {
+    if (event.code === "Space" && Number(usarCafe.innerText) > Number(0) && gameOn == 0) {
     activarCafeSound.play()
     activarCafe()
 }

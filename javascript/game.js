@@ -116,7 +116,7 @@ addCodigos = () => {
     codigoResueltoGameover.innerText = Number(codigoResuelto.innerText);
     intentoMasAltoGameover.innerText = intentoMasAlto.innerText
   };
-  
+
 
   gameLoop = () => {
     if (this.frames > 10800) {
@@ -129,13 +129,14 @@ addCodigos = () => {
     // 2. Acciones y movimientos de los elementos
     this.addPcMalo();
     this.addPcBueno();
-    this.addCafe();
+    this.addCafe();     
     this.pcMaloArr.forEach((eachPcMalo) => {
       eachPcMalo.izquierda();
     });
     this.pcMaloCollider();
     this.pcBuenoCollider();
     this.cafeCollider();
+ 
     this.gameScore();
 
     //3. Dibujado de los elementos
@@ -150,6 +151,8 @@ addCodigos = () => {
     this.cafeArr.forEach((eachCafe) => {
         eachCafe.drawCafe();
       });
+
+
 
     //4. Control de la recursion
     if (Number(codigoResuelto.innerText) > 249 && Number(codigoResuelto.innerText) < 299) {

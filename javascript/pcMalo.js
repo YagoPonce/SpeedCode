@@ -10,7 +10,12 @@ class PcMalo {
     }
 
     drawPcMalo = () => {
-        if(gameOn === 0 && codigoResuelto.innerText > 499){
+        if(gameOn === 0 && codigoResuelto.innerText > 1599){
+            this.s = 6;
+        } else if(gameOn === 0 && codigoResuelto.innerText > 1099){
+            this.s = 5;
+        ctx.drawImage(this.img, this.x, this.y, this.w, this.h) 
+        } else if(gameOn === 0 && codigoResuelto.innerText > 499){
             this.s = 4;
         ctx.drawImage(this.img, this.x, this.y, this.w, this.h) 
     } else if (gameOn === 0) {

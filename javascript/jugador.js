@@ -1,7 +1,7 @@
 class Jugador {
     constructor() {
         this.img = new Image();
-        this.img.src = "./images/Derecha1.png"
+        this.img.src = "./Images/Derecha1.png"
         this.x = 50; 
         this.y = 50;
         this.w = 70;
@@ -18,13 +18,13 @@ drawJugador = () => {
         this.s = 10;
     }
     if (this.direction === 1) {
-        this.img.src = "./images/Derecha1.png"
+        this.img.src = "./Images/Derecha1.png"
     } else if (this.direction === 2) {
-        this.img.src = "./images/Frente1.png"
+        this.img.src = "./Images/Frente1.png"
     } else if (this.direction === 3) {
-        this.img.src = "./images/Izquierda1.png"
+        this.img.src = "./Images/Izquierda1.png"
     } else if (this.direction === 4) {
-        this.img.src = "./images/Espaldas1.png"
+        this.img.src = "./Images/Espaldas1.png"
     }
     ctx.drawImage(this.img, this.x, this.y, this.w, this.h)
     }

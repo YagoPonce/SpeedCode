@@ -5,7 +5,7 @@
 body {
     margin: 10px;
     padding: 10px;
-    background-image: url(../images/pcs.gif);
+    background-image: url(../Images/pcs.gif);
     background-size: 100%;
     font-family: "Press Start 2P";
     color:rgb(47, 255, 57);
@@ -117,12 +117,12 @@ marquee {
 }
 
 .correcto {
-    background-image: url(../images/correcto.png);
+    background-image: url(../Images/correcto.png);
     background-size:cover;
 }
 
 .incorrecto {
-    background-image: url(../images/incorrecto.png);
+    background-image: url(../Images/incorrecto.png);
     background-size:cover;
 }
 

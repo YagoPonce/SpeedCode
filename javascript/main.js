@@ -19,13 +19,13 @@ let intentoMasAlto = document.querySelector("#intentoMasAlto");
 let usarCafe = document.querySelector("#usarCafe")
 let cafeActivo = false
 let tiempo = 0
-const openMusic = new Audio("/sounds/startScreenSound.wav");
-const gameMusic = new Audio("/sounds/gameScreenSound.mp3");
-const gameoverMusic = new Audio("/sounds/gameOverSong.wav");
-const cogerCafe = new Audio("/sounds/plusSound.wav")
-const plusSound = new Audio("/sounds/cafe.wav")
-const cogerPcBueno = new Audio("/sounds/pcbueno.wav")
-const activarCafeSound = new Audio("/sounds/usarCafe.wav")
+const openMusic = new Audio("./sounds/startScreenSound.wav");
+const gameMusic = new Audio("./sounds/gameScreenSound.mp3");
+const gameoverMusic = new Audio("./sounds/gameOverSong.wav");
+const cogerCafe = new Audio("./sounds/plusSound.wav")
+const plusSound = new Audio("./sounds/cafe.wav")
+const cogerPcBueno = new Audio("./sounds/pcbueno.wav")
+const activarCafeSound = new Audio("./sounds/usarCafe.wav")
 
 
 

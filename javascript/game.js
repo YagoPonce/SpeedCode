@@ -17,7 +17,7 @@ class Game {
   };
 
   addPcBueno = () => {
-    if (this.frames % 600 === 0) {
+    if (this.frames % 700 === 0) {
       this.pcBuenoArr.shift();
       let randomNumY = Math.random() * 380;
       let randomYint = Math.floor(randomNumY);
@@ -29,21 +29,21 @@ class Game {
   };
 
   addCafe = () => {
-    if (this.frames % 1300 === 0) {
+    if (this.frames % 600 === 0) {
       let randomNumY = Math.random() * 380;
       let randomYint = Math.floor(randomNumY);
       let randomNumX = Math.random() * 700;
       let randomXint = Math.floor(randomNumX);
       let newCafe = new Rapidez(randomYint, randomXint);
       this.cafeArr.push(newCafe);
-    } else if (this.frames % 1700 === 0) {
+    } else if (this.frames % 800 === 0) {
         this.cafeArr.shift();
     }
   };
 
   gameScore = () => {
     if (this.pcMaloArr.length !== 0 && this.pcMaloArr[0].x < -70) {
-      codigoResuelto.innerText = Number(codigoResuelto.innerText) + Number(10);
+      codigoResuelto.innerText = Number(codigoResuelto.innerText) + Number(5);
       this.pcMaloArr.shift();
       plusSound.play();
     }
@@ -57,7 +57,6 @@ class Game {
         this.jugador.y < eachPcMalo.y + eachPcMalo.h &&
         this.jugador.h + this.jugador.y > eachPcMalo.y
       ) {
-        lostSound.play();
         this.gameOver();
       }
     });
@@ -72,10 +71,30 @@ class Game {
         this.jugador.h + this.jugador.y > eachPcBueno.y
       ) {
         this.pcBuenoArr.shift();
-        codigoResuelto.innerText = Number(codigoResuelto.innerText) + Number(100);
+        cogerPcBueno.play()
+        codigoResuelto.innerText = Number(codigoResuelto.innerText) + Number(50);
       }
     });
   };
+
+  cafeCollider = () => {
+    this.cafeArr.forEach((eachCafe) => {
+      if (
+        this.jugador.x < eachCafe.x + eachCafe.w &&
+        this.jugador.x + this.jugador.w > eachCafe.x &&
+        this.jugador.y < eachCafe.y + eachCafe.h &&
+        this.jugador.h + this.jugador.y > eachCafe.y
+      ) {
+        this.cafeArr.shift();
+        cogerCafe.play()
+        codigoResuelto.innerText = Number(codigoResuelto.innerText) + Number(20);
+        usarCafe.innerText = Number(usarCafe.innerText) + Number(1);
+      }
+    });
+  };
+
+
+
 
 addCodigos = () => {
       let randomNum = Math.random() * 20;
@@ -100,6 +119,9 @@ addCodigos = () => {
   
 
   gameLoop = () => {
+    if (this.frames > 10800) {
+        this.gameOver()
+    }
     gameOn = 0;
     ctx.clearRect(0, 0, canvas.clientWidth, canvas.height);
     this.frames = this.frames + 1;
@@ -113,6 +135,7 @@ addCodigos = () => {
     });
     this.pcMaloCollider();
     this.pcBuenoCollider();
+    this.cafeCollider();
     this.gameScore();
 
     //3. Dibujado de los elementos
@@ -129,23 +152,31 @@ addCodigos = () => {
       });
 
     //4. Control de la recursion
-    if (Number(codigoResuelto.innerText) > 199 && Number(codigoResuelto.innerText) < 299) {
+    if (Number(codigoResuelto.innerText) > 249 && Number(codigoResuelto.innerText) < 299) {
         gameOn = 1;
         gameMusic.volume=0.3;
         ponerCodigo.InnerText = this.addCodigos()
-        } else if (Number(codigoResuelto.innerText) > 499 && Number(codigoResuelto.innerText) < 599) {
+        } else if (Number(codigoResuelto.innerText) > 449 && Number(codigoResuelto.innerText) < 499) {
         gameOn = 1;
         gameMusic.volume=0.3;
         ponerCodigo.InnerText = this.addCodigos()
-        } else if (Number(codigoResuelto.innerText) > 799 && Number(codigoResuelto.innerText) < 899) {
+        } else if (Number(codigoResuelto.innerText) > 749 && Number(codigoResuelto.innerText) < 799) {
         gameOn = 1;
         gameMusic.volume=0.3;
         ponerCodigo.InnerText = this.addCodigos()
-        } else if (Number(codigoResuelto.innerText) > 1099 && Number(codigoResuelto.innerText) < 1199) {
+        } else if (Number(codigoResuelto.innerText) > 1049 && Number(codigoResuelto.innerText) < 1099) {
         gameOn = 1;
         gameMusic.volume=0.3;
         ponerCodigo.InnerText = this.addCodigos()
-        }
+        } else if (Number(codigoResuelto.innerText) > 1349 && Number(codigoResuelto.innerText) < 1399) {
+            gameOn = 1;
+            gameMusic.volume=0.3;
+            ponerCodigo.InnerText = this.addCodigos()
+        } else if (Number(codigoResuelto.innerText) > 1649 && Number(codigoResuelto.innerText) < 1699) {
+            gameOn = 1;
+            gameMusic.volume=0.3;
+            ponerCodigo.InnerText = this.addCodigos()
+            }
 
 
 

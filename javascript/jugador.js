@@ -12,6 +12,11 @@ class Jugador {
         
     }
 drawJugador = () => {
+    if (cafeActivo) {
+        this.s = 20;
+    } else {
+        this.s = 10;
+    }
     if (this.direction === 1) {
         this.img.src = "../Images/Derecha1.png"
     } else if (this.direction === 2) {

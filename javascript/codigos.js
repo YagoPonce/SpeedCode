@@ -28,18 +28,18 @@ function addCodigo(randomNum) {
     }else if (randomNum == 13) {
  return `let randomNum = Math.random() * 2`
     }else if (randomNum == 14) {
- return `console.log("Hola mundo")`
+ return `for (let i in superheroes) {}`
     }else if (randomNum == 15) {
- return `console.log("Hola mundo")`
+ return `document.querySelector("button")`
     }else if (randomNum == 16) {
- return `console.log("Hola mundo")`
+ return `window.addEventListener("click", () => {}`
     }else if (randomNum == 17) {
- return `console.log("Hola mundo")`
+ return `ctx.fillRect(50, 50, 50, 50)`
     }else if (randomNum == 18) {
- return `console.log("Hola mundo")`
+ return `ctx.drawImage(img, 200, 200)`
     }else if (randomNum == 19) {
- return `console.log("Hola mundo")`
+ return `<button>Volver a Jugar</button>`
     }else if (randomNum == 20) {
-     return `console.log("Hola mundo")`
+     return `<!DOCTYPE html>`
     }
 }

@@ -4,8 +4,8 @@ class PcBueno {
         this.img.src = "/Images/pcBueno.png";
         this.x = randomXint; 
         this.y = randomYint;
-        this.w = 70;
-        this.h = 75;
+        this.w = 105;
+        this.h = 60;
     }
 
     drawPcBueno = () => {

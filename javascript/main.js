@@ -7,6 +7,7 @@ const startBtn = document.querySelector("#startBtn");
 const restartBtn = document.querySelector("#restart-btn");
 const gameoverScreen = document.querySelector("#gameoverScreen");
 const gameScreen = document.querySelector("#gameScreen");
+let correctoIncorrecto = document.querySelector("#correctoIncorrecto")
 let ponerCodigo = document.querySelector("#ponerCodigo");
 let intentoMasAltoGameover = document.querySelector("#intentoMasAltoGameover");
 let codigoResueltoGameover = document.querySelector("#codigoResueltoGameover");
@@ -15,35 +16,55 @@ let codigoResuelto = document.querySelector("#codigoResuelto");
 let gameObj;
 let gameOn = 0;
 let intentoMasAlto = document.querySelector("#intentoMasAlto");
+let usarCafe = document.querySelector("#usarCafe")
+let cafeActivo = false
+let tiempo = 0
 const openMusic = new Audio("/sounds/startScreenSound.wav");
 const gameMusic = new Audio("/sounds/gameScreenSound.mp3");
 const gameoverMusic = new Audio("/sounds/gameOverSong.wav");
-const lostSound = new Audio("/sounds/lostSound.wav")
-const plusSound = new Audio("/sounds/plusSound.wav")
+const cogerCafe = new Audio("/sounds/plusSound.wav")
+const plusSound = new Audio("/sounds/cafe.wav")
+const cogerPcBueno = new Audio("/sounds/pcbueno.wav")
+const activarCafeSound = new Audio("/sounds/usarCafe.wav")
+
+
 
 // FUNCIONES
 openMusic.play();
 openMusic.loop = true;
 
+activarCafe = () => {
+    cafeActivo = true
+    usarCafe.innerText = Number(usarCafe.innerText) - Number(1)
+    setTimeout(function() {
+        cafeActivo = false
+    }, 4000)
+}
+
+
 function startGame() {
-gameoverMusic.pause()
+gameoverMusic.pause();
 openMusic.pause();
 gameMusic.currentTime=0;
 gameMusic.play();
 gameMusic.volume=0.7
 gameMusic.loop = true;
-  gameoverScreen.style.display = "none";
-  startScreen.style.display = "none";
-  gameScreen.style.display = "grid";
-  gameObj = new Game();
-  gameObj.gameLoop();
+ gameoverScreen.style.display = "none";
+ startScreen.style.display = "none";
+ gameScreen.style.display = "grid";
+gameObj = new Game();
+gameObj.gameLoop();
+  
 }
+
+
 
 const replayGame = () => {
   if (Number(codigoResuelto.innerText) > Number(intentoMasAlto.innerText)) {
     intentoMasAlto.innerText = codigoResuelto.innerText;
   }
   codigoResuelto.innerText = 0;
+  usarCafe.innerText = 0;
   startGame();
 };
 
@@ -70,9 +91,24 @@ window.addEventListener("keydown", (event) => {
 });
 
 window.addEventListener("keydown", (event) => {
-  if (event.code === "Enter" && codes.value === ponerCodigo.innerText) {
-    codigoResuelto.innerText = Number(codigoResuelto.innerText) + Number(100);
+  if (event.code === "Enter" && codes.value === ponerCodigo.innerText && gameOn == 1) {
+    codigoResuelto.innerText = Number(codigoResuelto.innerText) + Number(50);
+    correctoIncorrecto.classList.add("correcto")
+    codes.value = ""
+    gameMusic.volume=0.7;
+    gameObj.gameLoop();
+  } else if (event.code === "Enter" && codes.value !== ponerCodigo.innerText && gameOn == 1) {
+    codigoResuelto.innerText = Number(codigoResuelto.innerText) - Number(100);
+    correctoIncorrecto.classList.add("incorrecto")
+    codes.value = ""
     gameMusic.volume=0.7;
     gameObj.gameLoop();
   }
 });
+
+window.addEventListener("keydown", (event) => {
+    if (event.code === "Space" && Number(usarCafe.innerText) > Number(0)) {
+    activarCafeSound.play()
+    activarCafe()
+}
+})

@@ -1,7 +1,7 @@
 SpeedCode
 Descripción
 SpeedCode es un juego 2d de un jugador que puede moverse horizontal y verticalmente.
-Consiste en esquivar ordenadores infectados (tocarlos reducirá la vida en un punto),
+Consiste en esquivar ordenadores corruptos (tocarlos reducirá la vida en un punto),
 y en recoger ordenadores que necesitan nuestra ayuda. Al recoger uno de estos ordenadores,
 el jugador tendrá que copiar el codigo que aparecerá en pantalla antes de que se acabe el
 tiempo. El juego acabará cuando el jugador pierda todas las vidas.

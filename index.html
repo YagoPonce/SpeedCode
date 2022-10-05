@@ -17,17 +17,19 @@
       <div id="startScreen"> 
       
         
-        <img src="/Images/estandard.png" width="300px" />
+        <img src="./Images/estandard.png" width="300px" />
         <div>
-          <h2> Esquiva el codigo corrupto y recoge el resto del código. 
-            Cuando alcances ciertas puntuaciones, tendrás que copiar un
-            código.
+          <h2 class="letreros"> Esquiva los ordenadores corruptos y recoge los que estan bien para sumar puntos. 
+            Cuando alcances ciertas puntuaciones, tendrás que copiar un código en la casilla
+            de la derecha.
+            Si tienes cafe, puedes apretar la tecla ESPACIO para aumentar tu velocidad unos segundos.
+            
           </h2>
         
       </div>
       <div>  
       <h2>Movimiento:</h2>
-        <img src="/Images/teclas.png" id="imgBtn" width="200px" height="200px"/>
+        <img src="./Images/teclas.png" id="imgBtn" width="200px" height="200px"/>
       </div>
      <div> <button id='startBtn' class="btn">EMPIEZA A CODEAR!</button></div>
      <p id="titulo">SpeedCode</p>
@@ -41,10 +43,15 @@
         
         <h2 class="letreros">Racha mas alta <p id="intentoMasAlto" class="letreros">0</p></h2>
         <h2 id="score" class="letreros">Codigo resuelto:<p id="codigoResuelto" class="letreros">0</p> </h2>
-          <h2 class="letreros">Copia este codigo sin ningún error: <h3 id="ponerCodigo" class="letreros"> "..."</h3></h2>
-          <canvas id="myCanvas" width="800" height="500"></canvas>
-  
-          <input id="codes" type="text" autocomplete="off" value> 
+        <div></div>
+          <h2 class="letreros">Copia este codigo sin ningún error: <h3 id="ponerCodigo" class="letreros">...</h3></h2>
+           <input autocomplete="off" id="codes" type="text" value>
+           <canvas id="myCanvas" width="800" height="500"></canvas>
+          <h2 class="letreros" id="letreroCafe">Cafe <span id="usarCafe">0</span></h2>
+          <div id="correctoIncorrecto"></div>
+        
+        
+
         
         
           

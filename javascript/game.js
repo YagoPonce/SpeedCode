@@ -3,6 +3,7 @@ class Game {
     this.jugador = new Jugador();
     this.pcMaloArr = [];
     this.pcBuenoArr = [];
+    this.cafeArr = [];
     this.frames = 0;
   }
 
@@ -27,10 +28,24 @@ class Game {
     }
   };
 
+  addCafe = () => {
+    if (this.frames % 1300 === 0) {
+      let randomNumY = Math.random() * 380;
+      let randomYint = Math.floor(randomNumY);
+      let randomNumX = Math.random() * 700;
+      let randomXint = Math.floor(randomNumX);
+      let newCafe = new Rapidez(randomYint, randomXint);
+      this.cafeArr.push(newCafe);
+    } else if (this.frames % 1700 === 0) {
+        this.cafeArr.shift();
+    }
+  };
+
   gameScore = () => {
-    if (this.pcMaloArr.length !== 0 && this.pcMaloArr[0].x < -0) {
+    if (this.pcMaloArr.length !== 0 && this.pcMaloArr[0].x < -70) {
       codigoResuelto.innerText = Number(codigoResuelto.innerText) + Number(10);
       this.pcMaloArr.shift();
+      plusSound.play();
     }
   };
 
@@ -42,6 +57,7 @@ class Game {
         this.jugador.y < eachPcMalo.y + eachPcMalo.h &&
         this.jugador.h + this.jugador.y > eachPcMalo.y
       ) {
+        lostSound.play();
         this.gameOver();
       }
     });
@@ -67,18 +83,21 @@ addCodigos = () => {
       ponerCodigo.innerText = addCodigo(codigoRandom)
   }
 
+
+
   gameOver = () => {
     gameOn = 2;
     gameScreen.style.display = "none";
     gameoverScreen.style.display = "grid";
+    gameMusic.pause()
+    gameoverMusic.currentTime=0;
+    gameoverMusic.play();
+    gameoverMusic.volume=0.7;
+    gameoverMusic.loop = true;
+    codigoResueltoGameover.innerText = Number(codigoResuelto.innerText);
+    intentoMasAltoGameover.innerText = intentoMasAlto.innerText
   };
   
-  screen = () => {
-    ctx.strokeStyle = "black";
-    ctx.strokeRect = (10, 10, 890, 690)
-    ctx.lineWidth = 100; //! esto no está haciendo nada. falta dibujar recuadro alrededor del canvas
-}
-
 
   gameLoop = () => {
     gameOn = 0;
@@ -88,6 +107,7 @@ addCodigos = () => {
     // 2. Acciones y movimientos de los elementos
     this.addPcMalo();
     this.addPcBueno();
+    this.addCafe();
     this.pcMaloArr.forEach((eachPcMalo) => {
       eachPcMalo.izquierda();
     });
@@ -97,7 +117,6 @@ addCodigos = () => {
 
     //3. Dibujado de los elementos
     this.jugador.drawJugador();
-    this.screen();
 
     this.pcMaloArr.forEach((eachPcMalo) => {
       eachPcMalo.drawPcMalo();
@@ -105,19 +124,26 @@ addCodigos = () => {
     this.pcBuenoArr.forEach((eachPcBueno) => {
       eachPcBueno.drawPcBueno();
     });
+    this.cafeArr.forEach((eachCafe) => {
+        eachCafe.drawCafe();
+      });
 
     //4. Control de la recursion
     if (Number(codigoResuelto.innerText) > 199 && Number(codigoResuelto.innerText) < 299) {
         gameOn = 1;
+        gameMusic.volume=0.3;
         ponerCodigo.InnerText = this.addCodigos()
         } else if (Number(codigoResuelto.innerText) > 499 && Number(codigoResuelto.innerText) < 599) {
         gameOn = 1;
+        gameMusic.volume=0.3;
         ponerCodigo.InnerText = this.addCodigos()
         } else if (Number(codigoResuelto.innerText) > 799 && Number(codigoResuelto.innerText) < 899) {
         gameOn = 1;
+        gameMusic.volume=0.3;
         ponerCodigo.InnerText = this.addCodigos()
         } else if (Number(codigoResuelto.innerText) > 1099 && Number(codigoResuelto.innerText) < 1199) {
         gameOn = 1;
+        gameMusic.volume=0.3;
         ponerCodigo.InnerText = this.addCodigos()
         }
 

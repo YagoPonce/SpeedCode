@@ -22,7 +22,7 @@ function addCodigo(randomNum) {
     }else if (randomNum == 10) {
  return `newArr.push("añadir al final del array")`
     }else if (randomNum ==11) {
- return `<link rel = "stylesheet" href = "/style.css"`
+ return `<link rel = "stylesheet" href = "/style.css">`
     }else if (randomNum == 12) {
  return `#variable { display: flex }`
     }else if (randomNum == 13) {

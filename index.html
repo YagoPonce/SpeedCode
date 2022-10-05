@@ -19,15 +19,20 @@
         
         <img src="/Images/estandard.png" width="300px" />
         <div>
-          <h2> 3 vidas </h2>
-        <span><img src="/Images/3vidas.png" /></span>
+          <h2> Esquiva el codigo corrupto y recoge el resto del código. 
+            Cuando alcances ciertas puntuaciones, tendrás que copiar un
+            código.
+          </h2>
+        
       </div>
       <div>  
-      <h2>Mobimiento:</h2>
+      <h2>Movimiento:</h2>
         <img src="/Images/teclas.png" id="imgBtn" width="200px" height="200px"/>
       </div>
-      <button id='startBtn' class="btn">EMPIEZA A CODEAR!</button>
-        </div>
+     <div> <button id='startBtn' class="btn">EMPIEZA A CODEAR!</button></div>
+     <p id="titulo">SpeedCode</p>
+     
+      </div>
       
     
         
@@ -36,9 +41,10 @@
         
         <h2 class="letreros">Racha mas alta <p id="intentoMasAlto" class="letreros">0</p></h2>
         <h2 id="score" class="letreros">Codigo resuelto:<p id="codigoResuelto" class="letreros">0</p> </h2>
-          <h1 class="letreros">Copia este codigo sin ningún error: <h3 id="ponerCodigo" class="letreros"> "..."</h3></h1>
+          <h2 class="letreros">Copia este codigo sin ningún error: <h3 id="ponerCodigo" class="letreros"> "..."</h3></h2>
           <canvas id="myCanvas" width="800" height="500"></canvas>
-          <input id="codes" type="text" width="100px" value> 
+  
+          <input id="codes" type="text" autocomplete="off" value> 
         
         
           
@@ -49,8 +55,10 @@
 
       <!-- GAME OVER SCREEN -->
       <div id="gameoverScreen">
-        <img src="./Images/tumblr_7b4391bbfed2af6764fec491eab08b57_babb6de8_1280.gif" alt="logo" />
+        <h2 class="letreros">Racha mas alta <p id="intentoMasAltoGameover" class="letreros">0</p></h2>
+        <h2 class="letreros">Codigo resuelto:<p id="codigoResueltoGameover" class="letreros"></p> </h2>
         <button id="restart-btn" class="btn">ÁNIMO, INTÉNTALO OTRA VEZ</button>
+        <img src="./Images/tumblr_7b4391bbfed2af6764fec491eab08b57_babb6de8_1280.gif" id="gameoverImg" alt="logo" />
       </div>
 
 
@@ -60,6 +68,7 @@
     <script src="/javascript/pcMalo.js"></script>
     <script src="/javascript/pcBueno.js"></script>
     <script src="/javascript/codigos.js"></script>
+    <script src="/javascript/poderes.js"></script>
 
   </body>
 </html>

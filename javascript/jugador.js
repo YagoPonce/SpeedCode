@@ -8,6 +8,7 @@ class Jugador {
         this.h = 80;
         this.s = 10;
         this.direction = 1
+        this.vida = 3;
         
     }
 drawJugador = () => {

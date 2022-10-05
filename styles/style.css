@@ -9,21 +9,28 @@ body {
     background-image: url(/Images/pcs.gif);
     background-size: 100%;
     font-family: "Press Start 2P";
-    color: white;
+    color:rgb(47, 255, 57);
 }
+
 
 #gameScreen {
     display: grid;
     grid-template-columns: 20% 20% 30% 30%;
-    justify-content: center;
-    grid-template-rows: auto auto;
+    justify-content: center; 
+    text-align: center;
 }
 #myCanvas {
     grid-column: 1/3;
+    grid-row: 2/4;
+}
+
+#titulo {
+    font-size: 100px;
 }
 
 #codes {
-    grid-column: 4/5
+    grid-column: 4/4;
+    grid-row: 2/3;
 }
 
 .letreros {
@@ -40,7 +47,11 @@ body {
 
 #gameoverScreen {
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 30% 20%;
+}
+
+#gameoverImg {
+    justify-content: center;
 }
 
 #gameScreen, #gameoverScreen, #speedCode {
@@ -53,15 +64,13 @@ marquee {
 }
 #startScreen {
     display: grid;
-    grid-template-columns:auto auto auto;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: auto auto;
     justify-content: baseline;
+    text-align: center;
     padding: 10px;
 }
 
-#startBtn {
-    grid-column: 1/4;
-}
 
 .btn{
     font-size: 40px;

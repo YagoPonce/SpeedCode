@@ -1,86 +1,28 @@
 SpeedCode
 Descripción
 SpeedCode es un juego 2d de un jugador que puede moverse horizontal y verticalmente.
-Consiste en esquivar ordenadores corruptos (tocarlos reducirá la vida en un punto),
-y en recoger ordenadores que necesitan nuestra ayuda. Al recoger uno de estos ordenadores,
-el jugador tendrá que copiar el codigo que aparecerá en pantalla antes de que se acabe el
-tiempo. El juego acabará cuando el jugador pierda todas las vidas.
+Consiste en esquivar ordenadores corruptos y recoger los ordenadores buenos para poder
+ir sumando puntos. Cada cierto tiempo, el jugador tendrá que copiar un codigo aleatorio
+en tu cuadrado de input, si acierta, recibirá más puntos, si falla, se le restarán.
+Tambien puede recoger cafe, que se usan con la tecla ESPACIO y que da un aumento de 
+velocidad. El juego dura 3 minutos, se pausa cuando hay que introducir codigo.
 
-                            MVP (DOM - CANVAS)
-                            game has three ship that moves horizontally
-                            ship shoots cannonballs up
-                            tentacles appear randomly from the top of the screen
-                            four tentacles stacking will end the game
-                            cannonballs destroy tentacles
-                            reload time for shooting cannonballs
-                            Increasing dificulty
-                            Backlog
-                            add scoreboard
-                            Ability to start the game on increased dificulty lvl
-                            Data Structure
-                            main.js
-                            buildSplashScreen () {}
-                            buildGameScreen () {}
-                            buildGameOverScreen () {}
-                            game.js
-                            Game () {}
-                            starLoop () {}
-                            checkCollisions () {}
-                            addTentacle () {}
-                            clearCanvas () {}
-                            updateCanvas () {}
-                            drawCanvas () {}
-                            GameOver () {}
-                            ship.js
-                            Ship () { this.x; this.y; this.direction; this.size }
-                            draw () {}
-                            move () {}
-                            shoot () {}
-                            checkScreenCollision () {}
-                            tentacle.js
-                            Tentacle () { this.x; this.y; this.direction; this.size }
-                            draw () {}
-                            move () {}
-                            checkCollisionBotton () {}
-                            cannonball.js
-                            Cannonball () { this.x; this.y; this.direction; this.size }
-                            draw () {}
-                            move () {}
-                            checkCollisionTop () {}
-                            States y States Transitions
-                            Definition of the different states and their transition (transition functions)
 
-                            splashScreen
-                            gameScreen
-                            gameOverScreen
-                            Task
-                            main - buildDom
-                            main - buildSplashScreen
-                            main - addEventListener
-                            main - buildGameScreen
-                            main - buildGameOverScreen
-                            game - startLoop
-                            game - buildCanvas
-                            game - updateCanvas
-                            game - drawCanvas
-                            tentacle - draw
-                            tentacle - move
-                            game - addTentacle
-                            ship - draw
-                            ship - move
-                            ship - shoot
-                            game - addShip
-                            cannonball - draw
-                            cannonball - move
-                            game - checkCollision
-                            game - GameOver
-                            game - addEventListener
-                            Links
-                            Trello
-                            Link url
+MVP (DOM - CANVAS)
+Se inicia en la STARTSCREEN, donde se expone la situación a resolver, se explican
+los comandos para jugar y se encuantra el boton para empezar a jugar.
+El juego básico consiste en esquivar ordenadores corruptos y coger los buenos.
+Esto irá sumando puntos, y la dificultad irá en aumento (subiendo la velocidad
+de movimiento de los ordenadores corruptos).
+Cuando colisionamos con un ordenador corrupto, aparece la pantalla de GameOver,
+que dice cuantos puntos se han conseguido, y almacena la partida más alta,
+mostrandolo en otro marcador.
+Hay un botón para empezar de nuevo el jugo.
+                            
+                
 
-                            Git
-                            URls for the project repo and deploy Link Repo Link Deploy
+Git
+URls for the project repo and deploy Link Repo Link Deploy
 
-                            Slides
-                            URls for the project presentation (slides) Link Slides.com
+Slides
+URls for the project presentation (slides) Link Slides.com

@@ -1,7 +1,7 @@
 class Rapidez {
     constructor (randomYint, randomXint) {
         this.img = new Image();
-        this.img.src = "/Images/cafe.png";
+        this.img.src = "./Images/cafe.png";
         this.x = randomXint; 
         this.y = randomYint;
         this.w = 60;

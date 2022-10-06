@@ -99,6 +99,7 @@ class Game {
         this.jugador.h + this.jugador.y > eachPcMalo.y
       ) {
         this.jugador.vida = this.jugador.vida - 1;
+        perdervida.play()
         this.pcMaloArr.splice((this.pcMaloArr.indexOf(eachPcMalo)), 1)
       }
     });

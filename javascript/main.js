@@ -29,6 +29,7 @@ const cogerPcBueno = new Audio("./sounds/pcbueno.wav");
 const activarCafeSound = new Audio("./sounds/usarCafe.wav");
 const codigobien = new Audio("./sounds/codigobien.wav");
 const wifi = new Audio("./sounds/wifi.wav");
+const perdervida = new Audio("./sounds/lostSound.wav")
 let cuentaAtras = 0;
 let cronometro;
 
@@ -116,6 +117,7 @@ window.addEventListener("keydown", (event) => {
     codigoResuelto.innerText = Number(codigoResuelto.innerText) - Number(100);
     correctoIncorrecto.classList.remove("correcto");
     correctoIncorrecto.classList.add("incorrecto");
+    perdervida.play()
     gameObj.jugador.vida -= 1;
     codes.value = "";
     gameMusic.volume = 0.6;

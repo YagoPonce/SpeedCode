@@ -97,7 +97,8 @@ body {
 
 #gameoverScreen {
   display: grid;
-  grid-template-columns: 30% 20%;
+  grid-template-columns: 30% 60% ;
+  grid-template-rows: 20% 55%;
 }
 
 #gameoverImg {
@@ -159,4 +160,8 @@ marquee {
   background-image: url(../Images/1vidas.png);
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+#mensajefinal {
+    grid-template-columns: 2/3;
 }

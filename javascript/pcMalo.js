@@ -1,29 +1,36 @@
 class PcMalo {
-    constructor (randomYint) {
-        this.img = new Image();
-        this.img.src = "./Images/pcMalo.png";
-        this.x = 800; 
-        this.y = randomYint;
-        this.w = 90;
-        this.h = 75;
-        this.s = 3;
-    }
+  constructor(randomYint) {
+    this.img = new Image();
+    this.img.src = "./Images/pcMalo.png";
+    this.x = 800;
+    this.y = randomYint;
+    this.w = 90;
+    this.h = 75;
+    this.s = 3;
+  }
 
-    drawPcMalo = () => {
-        if(gameOn === 0 && codigoResuelto.innerText > 1599){
-            this.s = 6;
-        } else if(gameOn === 0 && codigoResuelto.innerText > 1099){
-            this.s = 5;
-        ctx.drawImage(this.img, this.x, this.y, this.w, this.h) 
-        } else if(gameOn === 0 && codigoResuelto.innerText > 499){
-            this.s = 4;
-        ctx.drawImage(this.img, this.x, this.y, this.w, this.h) 
+  drawPcMalo = () => {
+    if (gameOn === 0 && codigoResuelto.innerText > 1999) {
+      this.s = 8;
+      ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
+    } else if (gameOn === 0 && codigoResuelto.innerText > 1699) {
+      this.s = 7;
+      ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
+    } else if (gameOn === 0 && codigoResuelto.innerText > 1399) {
+      this.s = 6;
+      ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
+    } else if (gameOn === 0 && codigoResuelto.innerText > 1099) {
+      this.s = 5;
+      ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
+    } else if (gameOn === 0 && codigoResuelto.innerText > 499) {
+      this.s = 4;
+      ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
     } else if (gameOn === 0) {
-         ctx.drawImage(this.img, this.x, this.y, this.w, this.h) 
-        }
-     }
-
-    izquierda = () => {
-        this.x = this.x - this.s
+      ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
     }
+  };
+
+  izquierda = () => {
+    this.x = this.x - this.s;
+  };
 }

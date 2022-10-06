@@ -17,7 +17,7 @@ de movimiento de los ordenadores corruptos).
 Cuando colisionamos con un ordenador corrupto, aparece la pantalla de GameOver,
 que dice cuantos puntos se han conseguido, y almacena la partida más alta,
 mostrandolo en otro marcador.
-Hay un botón para empezar de nuevo el jugo.
+Hay un botón para empezar de nuevo el juego.
                             
                 
 

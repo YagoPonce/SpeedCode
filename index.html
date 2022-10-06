@@ -8,55 +8,109 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-      
-      <marquee id="scrollText" behavior="scroll" scrollamount="25" direction="left">A pesar de todos tus esfuerzos, no has
-        podido acabar con el LAB de hoy... o quizás ya deberíamos decir del LAB de ayer. Te quedan solo
-        unas pocas horas....
-      </marquee>
-    
-      <div id="startScreen"> 
-      
-        
-        <img src="./Images/estandard.png" width="300px" />
-        <div>
-          <h2 class="letreros"> Esquiva los ordenadores corruptos y recoge los que estan bien para sumar puntos. 
-            Cuando alcances ciertas puntuaciones, tendrás que copiar un código en la casilla
-            de la derecha.
-            Si tienes cafe, puedes apretar la tecla ESPACIO para aumentar tu velocidad unos segundos.
-            
-          </h2>
-        
-      </div>
-      <div>  
-      <h2>Movimiento:</h2>
-        <img src="./Images/teclas.png" id="imgBtn" width="200px" height="200px"/>
-      </div>
-     <div> <button id='startBtn' class="btn">EMPIEZA A CODEAR!</button></div>
-     <p id="titulo">SpeedCode</p>
-      </div>
+    <marquee
+      id="scrollText"
+      behavior="scroll"
+      scrollamount="35"
+      direction="left"
+      >A pesar de todos tus esfuerzos, no pudiste acabar el LAB de ayer... y
+      solo te quedan 5 minutos para entregarlo!!!
+    </marquee>
 
-      <!-- GAME SCREEN -->
-      <div id="gameScreen">
-        
-        <h2 class="letreros">Racha mas alta <p id="intentoMasAlto" class="letreros">0</p></h2>
-        <h2 id="score" class="letreros">Codigo resuelto:<p id="codigoResuelto" class="letreros">0</p> </h2>
-        <div></div>
-          <h2 class="letreros">Copia este codigo sin ningún error: <h3 id="ponerCodigo" class="letreros">...</h3></h2>
-           <input autocomplete="off" id="codes" type="text" value>
-           <canvas id="myCanvas" width="800" height="500"></canvas>
-          <h2 class="letreros" id="letreroCafe">Cafe <span id="usarCafe">0</span></h2>
-          <div id="correctoIncorrecto"></div>
+    <div id="startScreen">
+      <img src="./Images/estandard.png" width="400px" />
+      <div>
+        <h2 class="letreros">
+          <li>
+            Esquiva los ordenadores corruptos (<img src="./Images/pcMalo.png"/>) y recoge los que estan bien 
+            (<img src="./Images/pcBueno.png"/>)para sumar puntos.
+          </li>
+          <p></p>
+          <li>
+            Cuando alcances ciertas puntuaciones, tendrás que copiar un código
+            en la casilla de la derecha... rápido, ¡el tiempo sigue corriendo!
+          </li>
+          <p></p>
+          <li>
+            Si tienes cafe (<img src="./Images/cafe.png"/>) podrás ir más rápido durante unos
+            segundos.
+          </li>
+          <p></p>
+          <li>
+            ¡Cuidado! Si chocas con el simbolo de desconexion (<img src="./Images/wifi.png"/>), tendrás lag y aparecerás en
+            cualquier parte
+          </li>
+        </h2>
+        </h2>
+      </div>
+      <div>
+        <h2 class="letreros">Movimiento:
+        <img
+          src="./Images/teclas.png"
+          id="imgBtn"
+        /></h2><h2 class="letreros">Introducir código:
+        <img
+        src="./Images/enter.png"
+        /></h2><h2 class="letreros">Vidas:
+          <img
+          src="./Images/3vidas.png"
+          />
+        </h2><h2 class="letreros">Tomar café:<p>
+          <img
+          src="./Images/spacio.png"
+          /></p>
+      </div>
+      
+        <button id="startBtn" class="btn">SPEEDCODE!</button>
+      
+      
+      
+      
     </div>
-      
 
-      <!-- GAME OVER SCREEN -->
-      <div id="gameoverScreen">
-        <h2 class="letreros">Racha mas alta <p id="intentoMasAltoGameover" class="letreros">0</p></h2>
-        <h2 class="letreros">Codigo resuelto:<p id="codigoResueltoGameover" class="letreros"></p> </h2>
-        <button id="restart-btn" class="btn">ÁNIMO, INTÉNTALO OTRA VEZ</button>
-        <img src="./Images/tumblr_7b4391bbfed2af6764fec491eab08b57_babb6de8_1280.gif" id="gameoverImg" alt="logo" />
-      </div>
+    <!-- GAME SCREEN -->
+    <div id="gameScreen">
+      <h2 class="letreros">
+        Racha mas alta
+        <p id="intentoMasAlto" class="letreros">0</p>
+      </h2>
+      <h2 id="score" class="letreros">
+        Codigo resuelto:
+        <p id="codigoResuelto" class="letreros">0</p>
+      </h2>
+      <div></div>
+      <h2 class="letreros">
+        Copia este codigo sin ningún error:
+        <h3 id="ponerCodigo" class="letreros">...</h3>
+      </h2>
+      <input autocomplete="off" id="codes" type="text" value />
+      <canvas id="myCanvas" width="800" height="500"></canvas>
 
+      <h2 class="letreros" id="letreroCafe">
+        Cafe <span id="usarCafe">0</span>
+      </h2>
+      <div id="correctoIncorrecto"></div>
+      <h2 class="letreros" id="letreroVida">Vida</h2>
+      <div id="vidasimg"></div>
+    </div>
+
+    <!-- GAME OVER SCREEN -->
+    <div id="gameoverScreen">
+      <h2 class="letreros">
+        Racha mas alta
+        <p id="intentoMasAltoGameover" class="letreros">0</p>
+      </h2>
+      <h2 class="letreros">
+        Codigo resuelto:
+        <p id="codigoResueltoGameover" class="letreros"></p>
+      </h2>
+      <button id="restart-btn" class="btn">ANIMO, INTENTALO OTRA VEZ</button>
+      <img
+        src="./Images/tumblr_7b4391bbfed2af6764fec491eab08b57_babb6de8_1280.gif"
+        id="gameoverImg"
+        alt="logo"
+      />
+    </div>
 
     <script src="./javascript/game.js"></script>
     <script src="./javascript/main.js"></script>
@@ -64,9 +118,7 @@
     <script src="./javascript/pcMalo.js"></script>
     <script src="./javascript/pcBueno.js"></script>
     <script src="./javascript/codigos.js"></script>
-    <script src="./javascript/internet.js"></script>
     <script src="./javascript/poderes.js"></script>
-    
-
+    <script src="./javascript/wifi.js"></script>
   </body>
 </html>

@@ -1,132 +1,162 @@
 @font-face {
-    font-family: "Press Start 2P";
-    src: url(../fonts/PressStart2P-Regular.ttf);
+  font-family: "Press Start 2P";
+  src: url(../fonts/PressStart2P-Regular.ttf);
 }
 body {
-    margin: 10px;
-    padding: 10px;
-    background-image: url(../Images/pcs.gif);
-    background-size: 100%;
-    font-family: "Press Start 2P";
-    color:rgb(47, 255, 57);
+  margin: 10px;
+  padding: 10px;
+  background-image: url(../Images/pcs.gif);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: "Press Start 2P";
+  color: rgb(47, 255, 57);
+}
+#scrollText {
+    font-size: 50px;
 }
 
+#startScreen {
+  display: grid;
+  grid-template-columns: 20% 40% 30%;
+  grid-template-rows: auto 20%;
+  justify-content:space-evenly;
+  text-align: center;
+  padding: 10px;
+}
+#startBtn {
+ grid-column: 1/4;
+ grid-row: 2/3
+}
+.btn {
+  font-size: 40px;
+  font-family: "Press Start 2P";
+  text-align: center;
+  margin: 20px;
+  font-weight: bold;
+  padding: 10px 10px 10px 10px;
+  background-color: lightgray;
+  text-shadow: -1px -1px black, 1px 1px white;
+  color:  black;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 21px;
+  border-radius: 10px;
+  box-shadow: 0 0.2em gray;
+  cursor: grab;
+}
+.btn:active {
+  box-shadow: none;
+  top: 0.2em;
+}
 
 #gameScreen {
-    display: grid;
-    grid-template-columns: 20% 20% 5% 20% 30%;
-    grid-template-rows: auto auto auto;
-    justify-content: center; 
-    text-align: center;
+  display: grid;
+  grid-template-columns: 20% 20% 5% 20% 30%;
+  grid-template-rows: 20% 10% 10% 20% auto;
+  justify-content: center;
+  text-align: center;
 }
 #myCanvas {
-    grid-column: 1/2;
-    grid-row: 2/5;
+  grid-column: 1/2;
+  grid-row: 2/5;
 }
 
+
+
 #gameScreen div {
-    display:grid;
-    justify-content: center;
+  display: grid;
+  justify-content: center;
 }
 
 #jugadorImg {
-    grid-column: 4/5;
-    grid-row: 3/3;
-    
+  grid-column: 4/5;
+  grid-row: 3/3;
 }
 
-#titulo {
-    font-size: 100px;
-}
 
 #codes {
-    grid-column: 5/6;
-    
+  grid-column: 5/6;
 }
 #letreroCafe {
-    grid-column:4/5;
-    grid-row: 2/3;
+  grid-column: 4/5;
+  grid-row: 2/3;
 }
 
 .letreros {
-    background-color: black;
-    margin: 10px;
-    border-radius: 10px;
-    padding: 10px;
+  background-color: black;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  justify-content: space-around;
 }
 
 #ponerCodigo {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
 }
 
 #gameoverScreen {
-    display: grid;
-    grid-template-columns: 30% 20%;
+  display: grid;
+  grid-template-columns: 30% 20%;
 }
 
 #gameoverImg {
-    justify-content: center;
+  justify-content: center;
 }
 
-#gameScreen, #gameoverScreen, #speedCode {
-    display: none;
+#gameScreen,
+#gameoverScreen,
+#speedCode {
+  display: none;
 }
 
 marquee {
-    padding: 5px;
-    font-size: 40px;
-}
-#startScreen {
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-template-rows: auto auto;
-    justify-content: baseline;
-    text-align: center;
-    padding: 10px;
+  padding: 5px;
+  font-size: 40px;
 }
 
-
-.btn{
-    font-size: 40px;
-    size: 100px;
-    text-align: center;
-	margin:20px;
-    font-weight: bold;
-    padding: 10px 10px 10px 10px ;
-    background-color: lightgray;
-    text-shadow: -1px -1px black, 1px 1px white;
-    color: gray;
-    -webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-o-border-radius: 21px;
-	border-radius: 10px;
-    box-shadow: 0 .2em gray; 
-    cursor:grab;
-
-}
-.btn:active {
-	box-shadow: none;
-	position: relative;
-	top: .2em;
-}
 
 
 #myCanvas {
-    background: rgba(170, 187, 97, 0.5);
+  background: rgba(170, 187, 97, 0.5);
 }
 
 .correcto {
-    background-image: url(../Images/correcto.png);
-    background-size:cover;
+  background-image: url(../Images/correcto.png);
+  background-size: cover;
 }
 
 .incorrecto {
-    background-image: url(../Images/incorrecto.png);
-    background-size:cover;
+  background-image: url(../Images/incorrecto.png);
+  background-size: cover;
 }
 
 #correctoIncorrecto {
-    grid-column:5/6;
-    grid-row: 3/6;
+  grid-column: 5/6;
+  grid-row: 3/6;
+}
+
+#letreroVida {
+  grid-column: 4/5;
+  grid-row: 3/4;
+}
+#vidasimg {
+  grid-column: 4/5;
+  grid-row: 4/5;
+}
+
+.tresvidas {
+  background-image: url(../Images/3vidas.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.dosvidas {
+  background-image: url(../Images/2vidas.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.unavida {
+  background-image: url(../Images/1vidas.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }

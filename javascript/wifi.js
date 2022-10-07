@@ -6,7 +6,7 @@ class Wifi {
     this.y = randomYint;
     this.w = 40;
     this.h = 40;
-    this.s = 2;
+    this.s = 1;
     this.wifiDirectionX = 1;
     this.wifiDirectionY = 1;
   }

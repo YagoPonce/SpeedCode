@@ -19,21 +19,19 @@ class Game {
   };
 
   addWifi = () => {
-    if (gameOn === 0 && this.frames % 1600 === 0) {
+    if (gameOn === 0 && this.frames % 1605 === 0 && Number(codigoResuelto.innerText) > 500) {
       let randomNum = Math.random() * 350;
       let randomYint = Math.floor(randomNum);
       let newWifi = new Wifi(randomYint);
       this.wifiArr.push(newWifi);
-    } else if (gameOn === 0 && this.frames % 1200 === 0) {
+    } else if (gameOn === 0 && this.frames % 1210 === 0) {
       let randomNum = Math.random() * 350;
       let randomYint = Math.floor(randomNum);
       let newWifi = new Wifi(randomYint);
       this.wifiArr.push(newWifi);
     } else if (
       gameOn === 0 &&
-      codigoResuelto.innerText > 260 &&
-      codigoResuelto.innerText < 320 &&
-      this.frames % 500 === 0
+      codigoResuelto.innerText > 260 && this.frames % 900 === 0
     ) {
       let randomNum = Math.random() * 350;
       let randomYint = Math.floor(randomNum);
@@ -55,7 +53,7 @@ class Game {
   };
 
   addCafe = () => {
-    if (this.frames % 600 === 0) {
+    if (this.frames % 615 === 0) {
       let randomNumY = Math.random() * 380;
       let randomYint = Math.floor(randomNumY);
       let randomNumX = Math.random() * 700;
@@ -68,7 +66,7 @@ class Game {
   };
 
   addCorazon = () => {
-    if (this.frames % 1600 === 0) {
+    if (this.frames % 1250 === 0) {
       let randomNumY = Math.random() * 380;
       let randomYint = Math.floor(randomNumY);
       let randomNumX = Math.random() * 700;
@@ -120,9 +118,9 @@ class Game {
         this.jugador.x = randomXint;
         this.jugador.y = randomYint;
         wifi.play();
-        this.wifiArr.shift();
+        this.wifiArr.splice((this.wifiArr.indexOf(eachWifi)), 1)
       } else if (this.x < -40) {
-        this.wifiArr.shift;
+        this.wifiArr.shift();
       }
     });
   };
@@ -152,7 +150,7 @@ class Game {
         this.jugador.y < eachCafe.y + eachCafe.h &&
         this.jugador.h + this.jugador.y > eachCafe.y
       ) {
-        this.cafeArr.shift();
+        this.cafeArr.splice((this.cafeArr.indexOf(eachCafe)), 1)
         cogerCafe.play();
         codigoResuelto.innerText =
           Number(codigoResuelto.innerText) + Number(10);

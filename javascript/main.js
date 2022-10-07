@@ -64,7 +64,7 @@ function startGame() {
   startScreen.style.display = "none";
   gameScreen.style.display = "grid";
   gameObj = new Game();
-  cuentaAtras = 3000000;
+  cuentaAtras = 300000;
   cronometro = setTimeout(() => {
     gameObj.gameOver();
   }, cuentaAtras);

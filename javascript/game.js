@@ -139,6 +139,7 @@ class Game {
         cogerPcBueno.play();
         codigoResuelto.innerText =
           Number(codigoResuelto.innerText) + Number(50);
+          console.log("pcbuenocollider")
       }
     });
   };
@@ -154,7 +155,7 @@ class Game {
         this.cafeArr.shift();
         cogerCafe.play();
         codigoResuelto.innerText =
-          Number(codigoResuelto.innerText) + Number(20);
+          Number(codigoResuelto.innerText) + Number(10);
         usarCafe.innerText = Number(usarCafe.innerText) + Number(1);
       }
     });
@@ -214,7 +215,7 @@ class Game {
     gameMusic.pause();
     gameoverMusic.currentTime = 0;
     gameoverMusic.play();
-    gameoverMusic.volume = 0.6;
+    gameoverMusic.volume = 0.05;
     gameoverMusic.loop = true;
     codigoResueltoGameover.innerText = Number(codigoResuelto.innerText);
     intentoMasAltoGameover.innerText = intentoMasAlto.innerText;
@@ -279,49 +280,54 @@ class Game {
         Number(codigoResuelto.innerText) < 249
       ) {
         gameOn = 1;
-        gameMusic.volume = 0.2;
+        gameMusic.volume = 0.03;
+        introcodigo.play()
         ponerCodigo.InnerText = this.addCodigos();
       } else if (
         Number(codigoResuelto.innerText) > 449 &&
         Number(codigoResuelto.innerText) < 499
       ) {
         gameOn = 1;
-        gameMusic.volume = 0.2;
+        gameMusic.volume = 0.03;
         ponerCodigo.InnerText = this.addCodigos();
       } else if (
         Number(codigoResuelto.innerText) > 749 &&
         Number(codigoResuelto.innerText) < 799
       ) {
         gameOn = 1;
-        gameMusic.volume = 0.2;
+        gameMusic.volume = 0.03;
+        introcodigo.play()
         ponerCodigo.InnerText = this.addCodigos();
       } else if (
         Number(codigoResuelto.innerText) > 1049 &&
         Number(codigoResuelto.innerText) < 1099
       ) {
         gameOn = 1;
-        gameMusic.volume = 0.2;
+        gameMusic.volume = 0.03;
+        introcodigo.play()
         ponerCodigo.InnerText = this.addCodigos();
       } else if (
         Number(codigoResuelto.innerText) > 1349 &&
         Number(codigoResuelto.innerText) < 1399
       ) {
         gameOn = 1;
-        gameMusic.volume = 0.2;
+        gameMusic.volume = 0.03;
+        introcodigo.play()
         ponerCodigo.InnerText = this.addCodigos();
       } else if (
         Number(codigoResuelto.innerText) > 1649 &&
         Number(codigoResuelto.innerText) < 1699
       ) {
         gameOn = 1;
-        gameMusic.volume = 0.2;
+        gameMusic.volume = 0.03;
+        introcodigo.play()
         ponerCodigo.InnerText = this.addCodigos();
       } else if (
         Number(codigoResuelto.innerText) > 1949 &&
         Number(codigoResuelto.innerText) < 1999
       ) {
         gameOn = 1;
-        gameMusic.volume = 0.2;
+        gameMusic.volume = 0.05;
         ponerCodigo.InnerText = this.addCodigos();
       }
 

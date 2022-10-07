@@ -24,12 +24,21 @@ const openMusic = new Audio("./sounds/startScreenSound.wav");
 const gameMusic = new Audio("./sounds/gameScreenSound.mp3");
 const gameoverMusic = new Audio("./sounds/gameOverSong.wav");
 const cogerCafe = new Audio("./sounds/plusSound.wav");
+cogerCafe.volume = 0.05;
+const introcodigo = new Audio("./sounds/introcodigo.wav");
+introcodigo.volume = 0.05;
 const plusSound = new Audio("./sounds/cafe.wav");
+plusSound.volume = 0.05;
 const cogerPcBueno = new Audio("./sounds/pcbueno.wav");
+cogerPcBueno.volume = 0.05;
 const activarCafeSound = new Audio("./sounds/usarCafe.wav");
+activarCafeSound.volume = 0.05;
 const codigobien = new Audio("./sounds/codigobien.wav");
+codigobien.volume = 0.05;
 const wifi = new Audio("./sounds/wifi.wav");
-const perdervida = new Audio("./sounds/lostSound.wav")
+wifi.volume = 0.05;
+const perdervida = new Audio("./sounds/lostSound.wav");
+perdervida.volume = 0.05;
 let cuentaAtras = 0;
 let cronometro;
 
@@ -49,7 +58,7 @@ function startGame() {
   openMusic.pause();
   gameMusic.currentTime = 0;
   gameMusic.play();
-  gameMusic.volume = 0.6;
+  gameMusic.volume = 0.05;
   gameMusic.loop = true;
   gameoverScreen.style.display = "none";
   startScreen.style.display = "none";
@@ -106,7 +115,7 @@ window.addEventListener("keydown", (event) => {
     correctoIncorrecto.classList.add("correcto");
     codigobien.play();
     codes.value = "";
-    gameMusic.volume = 0.6;
+    gameMusic.volume = 0.05;
     gameOn = 0;
     gameObj.gameLoop();
   } else if (
@@ -117,10 +126,10 @@ window.addEventListener("keydown", (event) => {
     codigoResuelto.innerText = Number(codigoResuelto.innerText) - Number(100);
     correctoIncorrecto.classList.remove("correcto");
     correctoIncorrecto.classList.add("incorrecto");
-    perdervida.play()
+    perdervida.play();
     gameObj.jugador.vida -= 1;
     codes.value = "";
-    gameMusic.volume = 0.6;
+    gameMusic.volume = 0.05;
     gameOn = 0;
     gameObj.gameLoop();
   }
